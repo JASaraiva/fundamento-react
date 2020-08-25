@@ -7,6 +7,8 @@ import Card from './components/layout/Card'
 import "./App.css"
 import Repeticao from './components/basicos/Repeticao.jsx'
 import Condicional from "./components/basicos/Condicional"
+import Pai from "./components/comunicacao/direta/Pai.jsx"
+import Super from "./components/comunicacao/indireta/Super"
 
 export default props =>
     <div className="App">
@@ -32,5 +34,15 @@ export default props =>
 
         <Card titulo="Quinto Componente">
            <Condicional numero={1}></Condicional>
+        </Card>
+
+
+        <Card titulo="Sexto Componente">
+           <Pai></Pai>
+        </Card>
+
+
+        <Card titulo="Setiimo Componente">
+           <Super></Super>
         </Card>
     </div>
