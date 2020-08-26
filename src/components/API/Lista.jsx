@@ -1,5 +1,6 @@
 import React, { Component } from "react"
-import API from "./API"
+import api from "./API"
+//import Axios from "axios"
 
 class Lista extends Component{
 
@@ -7,21 +8,22 @@ class Lista extends Component{
             projects: []
     }
 
-    async componentDidMount(){
-        const response = await API.get('projects')
-        console.log(response.data)
-
+    async componentDidMount(props){
+        const response = await api.get("projects/?format=json");
         this.setState({projects: response.data})
     }
 
 
     render(){
-
         const {projects} = this.state
         return(
             <div>
                 <h3>Opções</h3>
-              
+                {projects.map(pro => (
+                    <li key={pro.id}>{pro.name}</li>
+                ))}
+             
+                
             </div>
         );
     }

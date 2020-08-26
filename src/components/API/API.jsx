@@ -1,5 +1,9 @@
-import React from "react"
 import Axios from "axios"
 
-export default props =>
-    Axios.create({baseURL:"https://site-jas.herokuapp.com/"})
+
+    const instance = Axios.create({
+        baseURL: "https://site-jas.herokuapp.com/",
+        headers: {"Authorization": "Token cbbd44d4512a83192c5ca9a0cd4b88a40fd8027d"}
+    });
+
+    export default instance;
