@@ -10,10 +10,16 @@ import Condicional from "./components/basicos/Condicional"
 import Pai from "./components/comunicacao/direta/Pai.jsx"
 import Super from "./components/comunicacao/indireta/Super"
 import Input from "./components/form/Input"
+import Lista from "./components/API/Lista.jsx"
 
 export default props =>
     <div className="App">
         <Card titulo="Setimo Componente">
+           <Lista></Lista>
+        </Card>
+
+
+        {/* <Card titulo="Setimo Componente">
            <Input></Input>
         </Card>
 
@@ -48,5 +54,5 @@ export default props =>
 
         <Card titulo="Primeiro Componente">
             <Primeiro></Primeiro>
-        </Card>
+        </Card> */}
     </div>
